@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalle del Cuestionario</title>
+</head>
+<body>
+    <h1 th:text="${appName}"></h1>
+    <h2>Detalle del Cuestionario</h2>
+    <div th:if="${cuestionario != null}">
+        <p><strong>ID:</strong> <span th:text="${cuestionario.id}"></span></p>
+        <p><strong>Título:</strong> <span th:text="${cuestionario.titulo}"></span></p>
+        <p><strong>Materia:</strong> <span th:text="${cuestionario.materia}"></span></p>
+        <p><strong>Duración:</strong> <span th:text="${cuestionario.duracionMinutos}"></span> minutos</p>
+    </div>
+    <div th:if="${cuestionario == null}">
+        <p>Cuestionario no encontrado.</p>
+    </div>
+    <a href="/cuestionarios">Volver al listado</a>
+</body>
+</html>

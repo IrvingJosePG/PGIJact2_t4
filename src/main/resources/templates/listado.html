@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>NextVoto - Cuestionarios</title>
+</head>
+<body>
+    <h1 th:text="${appName}"></h1>
+    <h2>Lista de Cuestionarios</h2>
+    <a href="/cuestionarios/nuevo">Crear nuevo cuestionario</a>
+    <ul>
+        <li th:each="c : ${cuestionarios}">
+            <strong th:text="${c.titulo}"></strong> - Materia: <span th:text="${c.materia}"></span> 
+            (<span th:text="${c.duracionMinutos}"></span> mins)
+            <a th:href="@{/cuestionarios/detalle/{id}(id=${c.id})}">Ver detalle</a>
+        </li>
+    </ul>
+</body>
+</html>
