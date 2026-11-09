@@ -14,34 +14,30 @@ Se implementaron las siguientes características requeridas:
 
 ### 1. Vista de Listado (`th:each` y `@Value`)
 Se muestra la lista de cuestionarios iterada dinámicamente y el título inyectado desde `application.properties`.
-![Vista de listado de cuestionarios](img/listado.png)
+![Vista de listado de cuestionarios](img/Listado.png)
 
 ### 2. Formulario de Captura (`@ModelAttribute`)
 Formulario HTML que vincula directamente los inputs con el objeto `CuestionarioDTO`.
-> **[🖼️ INSERTA AQUÍ TU CAPTURA DEL FORMULARIO]**
+![Formulario de nuevo cuestionario](img/Captura.png)
 
 ### 3. Filtrado mediante `@RequestParam`
 Ruta que recibe un parámetro por URL para filtrar los cuestionarios (ej. `?materia=Redes`).
-> **[🖼️ INSERTA AQUÍ TU CAPTURA DE LA URL CON EL PARÁMETRO]**
+![Prueba de RequestParam filtrando materia](img/Filtrado.png)
 
 ### 4. Detalle mediante `@PathVariable`
 Ruta dinámica que muestra la información de un solo cuestionario basado en su ID (ej. `/detalle/1`).
-> **[🖼️ INSERTA AQUÍ TU CAPTURA DEL DETALLE DE UN CUESTIONARIO]**
+![Detalle de un cuestionario usando PathVariable](img/Detalle.png)
 
 ### 5. Prueba de Endpoint POST (Postman)
 Prueba del `CuestionarioRestController` enviando un JSON válido y recibiendo el objeto creado con su ID asignado.
-> **[🖼️ INSERTA AQUÍ TU CAPTURA DE POSTMAN]**
+![Prueba POST en Postman](img/POST.png)
 
----
 
-## 🌐 Enlaces de Despliegue en VPS
+## Enlaces de Despliegue en VPS
 Ambas versiones del proyecto se encuentran corriendo de forma simultánea e independiente en el servidor VPS configurado.
 
-* 🟢 **Actividad 2 (MVC/Thymeleaf) - Puerto 9081:**
+* **Actividad 2 (MVC/Thymeleaf) - Puerto 9081:**
   [http://167.99.15.140:9081/cuestionarios](http://167.99.15.140:9081/cuestionarios)
 
-* 🟢 **Actividad 1 (REST API original) - Puerto 8081:**
+* **Actividad 1 (REST API original) - Puerto 8081:**
   [http://167.99.15.140:8081/mi-nombre](http://167.99.15.140:8081/mi-nombre)
-
----
-*Desarrollado por Irving José P. G.*
